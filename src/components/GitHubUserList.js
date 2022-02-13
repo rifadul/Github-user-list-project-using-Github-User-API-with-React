@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Loading from './Loading';
 
 export default function GitHubUserList() {
     const [gitUsers, setGitUsers] = useState([]);
+    const [loading, setLoading] = useState(true)
 
     const getGitUser = async () => {
         try {
             const response = await axios.get('https://api.github.com/users');
             setGitUsers(response.data);
+            setLoading(false);
         } catch (error) {
+            setLoading(false);
             console.log(error);
         }
     };
@@ -16,6 +20,10 @@ export default function GitHubUserList() {
     useEffect(() => {
         getGitUser();
     }, []);
+
+    if(loading){
+        return <Loading/>
+    }
     return (
         <div>
             <h2>List of GitHub Users</h2>
