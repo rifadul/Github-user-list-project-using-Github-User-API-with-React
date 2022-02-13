@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FcApproval } from "react-icons/fc";
+import { FaUserTie } from "react-icons/fa";
 export default function GitHubUsersList({ gitUsers }) {
     return (
         <div>
@@ -24,7 +25,7 @@ export default function GitHubUsersList({ gitUsers }) {
                                         <div className="ml-3 w-100">
                                             <a href={html_url} className="text-decoration-none" target="_blank">
                                                 <h4 className="mb-0 mt-0 textLeft text-capitalize">
-                                                    {login}
+                                                    <FaUserTie/> {login} <FcApproval/>
                                                 </h4>
                                             </a>
 
