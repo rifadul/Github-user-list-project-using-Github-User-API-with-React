@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GitUser = ({ gitUsers }) => {
+export default function GitHubUsersList({ gitUsers }) {
     return (
         <div>
             <h2>List of GitHub Users</h2>
@@ -68,5 +68,3 @@ const GitUser = ({ gitUsers }) => {
         </div>
     )
 }
-
-export default GitUser

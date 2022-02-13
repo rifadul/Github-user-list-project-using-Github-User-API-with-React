@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loading from './Loading';
-import GitUser from './GitUser';
+import GitHubUsersList from './GitHubUsersList';
 
-export default function GitHubUserList() {
+export default function GitHubUsers() {
     const [gitUsers, setGitUsers] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -25,5 +25,5 @@ export default function GitHubUserList() {
     if (loading) {
         return <Loading />;
     }
-    return <GitUser gitUsers={gitUsers} />;
+    return <GitHubUsersList gitUsers={gitUsers} />;
 }
