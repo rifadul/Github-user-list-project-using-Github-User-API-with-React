@@ -1,9 +1,10 @@
 import './App.css';
+import GitHubUserList from './components/GitHubUserList';
 
 function App() {
     return (
-        <div className="App App-header">
-            <h1>Hello</h1>
+        <div className="App">
+        <GitHubUserList/>
         </div>
     );
 }
